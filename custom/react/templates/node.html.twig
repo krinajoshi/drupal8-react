@@ -1,0 +1,27 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+{{ attach_library('react/react') }}
+{{ attach_library('react/react-app') }}
+{{ attach_library('react/react-bootstrap') }}
+
+<article{{ attributes.addClass(classes) }}>
+  <div{{ content_attributes.addClass('node__content') }}>
+    <div id="react-app">
+    </div>
+    <div id="react-content" class="invisible" data-title="{{ node.label }}">
+      {{ content }}
+    </div>
+  </div>
+</article>
+
+
+

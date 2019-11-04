@@ -1,0 +1,14 @@
+a, .link {
+    color: #8f001a;
+}
+
+
+ul {
+   list-style-type: square;
+	color: rgb(143, 0, 26);
+    
+}
+
+.col-sm-8 .card-body {
+    background-color: rgba(0,0,0,.03);
+}

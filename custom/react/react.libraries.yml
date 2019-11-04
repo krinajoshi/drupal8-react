@@ -1,0 +1,28 @@
+react:
+  version: 1.x
+  header: true
+  js:
+    https://unpkg.com/react@16/umd/react.production.min.js: { external: true, minified: true }
+    https://unpkg.com/react-dom@16/umd/react-dom.production.min.js: { external: true, minified: true }
+    #Babel is the javascript complier 
+    https://unpkg.com/@babel/standalone@7.6.4/babel.js: { external: true }
+
+#Since the DOM element (div#react-app) needs to load, you can ensure that the HTML is available by placing the script in the footer.
+react-app:
+  version: 1.0.0
+  footer: true
+  js:  
+    js/NodeItem.js: { preprocess: 0, attributes: { type: text/babel } }
+    js/NoData.js: { preprocess: 0, attributes: { type: text/babel } }
+    js/index.js: { preprocess: 0, attributes: { type: text/babel } }
+ 
+
+react-bootstrap:
+   version: 1.0.0
+   footer: true
+   js:
+    https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js: { external: true, minified: true }
+   css:
+    theme: 
+        https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css: { external: true, minified: true  }
+        css/basic_page.css: {}
