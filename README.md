@@ -1,7 +1,10 @@
 # drupal8-react
 In your Drupal installation, go to docroot/themes.
+
 Create a new folder called custom.
+
 Create a new theme folder called react.
+
 Create a new *.info.yml file called react.info.yml with the following contents:
 
     name: React Theme
